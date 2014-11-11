@@ -49,16 +49,27 @@
                                 <state key="normal" title="Answer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rj4-jU-JkB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mld-jl-bfY">
                                 <rect key="frame" x="111" y="473" width="98" height="30"/>
                                 <state key="normal" title="Next Question">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextQuestionButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HuY-ap-hTY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="answerField" destination="93C-yX-okA" id="x4a-IY-lca"/>
+                        <outlet property="answerLabel" destination="CPh-3P-82I" id="NFU-YT-Kwv"/>
+                        <outlet property="questionLabel" destination="cJK-9O-JaU" id="sbh-Ow-n1i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

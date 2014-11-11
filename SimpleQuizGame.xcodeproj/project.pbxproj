@@ -14,6 +14,7 @@
 		5CCBEB391A119E0200E21CD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CCBEB381A119E0200E21CD0 /* Images.xcassets */; };
 		5CCBEB3C1A119E0200E21CD0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CCBEB3A1A119E0200E21CD0 /* LaunchScreen.xib */; };
 		5CCBEB481A119E0200E21CD0 /* SimpleQuizGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCBEB471A119E0200E21CD0 /* SimpleQuizGameTests.m */; };
+		5CCBEB531A119F6500E21CD0 /* QuizQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCBEB521A119F6500E21CD0 /* QuizQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		5CCBEB411A119E0200E21CD0 /* SimpleQuizGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleQuizGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCBEB461A119E0200E21CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CCBEB471A119E0200E21CD0 /* SimpleQuizGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleQuizGameTests.m; sourceTree = "<group>"; };
+		5CCBEB511A119F6500E21CD0 /* QuizQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizQuestion.h; sourceTree = "<group>"; };
+		5CCBEB521A119F6500E21CD0 /* QuizQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				5CCBEB301A119E0200E21CD0 /* AppDelegate.m */,
 				5CCBEB321A119E0200E21CD0 /* ViewController.h */,
 				5CCBEB331A119E0200E21CD0 /* ViewController.m */,
+				5CCBEB511A119F6500E21CD0 /* QuizQuestion.h */,
+				5CCBEB521A119F6500E21CD0 /* QuizQuestion.m */,
 				5CCBEB351A119E0200E21CD0 /* Main.storyboard */,
 				5CCBEB381A119E0200E21CD0 /* Images.xcassets */,
 				5CCBEB3A1A119E0200E21CD0 /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				5CCBEB341A119E0200E21CD0 /* ViewController.m in Sources */,
 				5CCBEB311A119E0200E21CD0 /* AppDelegate.m in Sources */,
+				5CCBEB531A119F6500E21CD0 /* QuizQuestion.m in Sources */,
 				5CCBEB2E1A119E0200E21CD0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

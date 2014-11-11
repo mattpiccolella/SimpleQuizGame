@@ -9,6 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *questionLabel;
+@property (strong, nonatomic) IBOutlet UITextField *answerField;
+@property (strong, nonatomic) IBOutlet UILabel *answerLabel;
+- (IBAction)answerButton:(id)sender;
+- (IBAction)nextQuestionButton:(id)sender;
 
 @end
 
@@ -24,4 +29,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)answerButton:(id)sender {
+}
+
+- (IBAction)nextQuestionButton:(id)sender {
+}
 @end
