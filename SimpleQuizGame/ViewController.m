@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "QuizQuestion.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutlet UITextField *answerField;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,10 +32,7 @@
     self.questionsArray = [self loadQuestionsArray];
     self.currentIndex = 0;
     self.score = 0;
-    QuizQuestion *currentQuestion = [self currentQuestion];
-    [self.questionLabel setText:currentQuestion.question];
-    [self.answerLabel setHidden:TRUE];
-    [self.scoreLabel setText:[self currentScore]];
+    [self setInterfaceForCurrentQuestion];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,10 +41,19 @@
 }
 
 - (IBAction)answerButton:(id)sender {
+    if ([self isQuestionCorrect]) {
+        [self.answerLabel setText:@"Correct"];
+        self.score++;
+        [self.scoreLabel setText:[self currentScore]];
+    } else {
+        [self.answerLabel setText:@"Incorrect"];
+    }
+    [self.answerLabel setHidden:FALSE];
 }
 
 - (IBAction)nextQuestionButton:(id)sender {
-    
+    self.currentIndex++;
+    [self setInterfaceForCurrentQuestion];
 }
 
 - (NSMutableArray*) loadQuestionsArray {
@@ -65,5 +71,22 @@
 
 - (NSString*) currentScore {
     return [[NSString alloc] initWithFormat:@"Score: %d", self.score];
+}
+
+- (void)setInterfaceForCurrentQuestion {
+    QuizQuestion *currentQuestion = [self currentQuestion];
+    [self.questionLabel setText:currentQuestion.question];
+    [self.answerField setText:@""];
+    [self.answerLabel setHidden:TRUE];
+    [self.scoreLabel setText:[self currentScore]];
+}
+
+- (BOOL)isQuestionCorrect {
+    return [self.answerField.text isEqualToString:[[self currentQuestion] answer]];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 @end
