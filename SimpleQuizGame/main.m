@@ -1,9 +1,9 @@
 //
 //  main.m
-//  SimpleQuizGame
 //
-//  Created by Matt on 11/10/14.
-//  Copyright (c) 2014 Matthew Piccolella. All rights reserved.
+//  Where we see the intersection of Objective-C. Every C application must have a method called
+//  "main" to run, and we see that here. Essentially it starts our application using our
+//  AppDelegate. Don't worry about touching this file ever.
 //
 
 #import <UIKit/UIKit.h>

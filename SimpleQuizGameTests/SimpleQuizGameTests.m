@@ -1,9 +1,10 @@
 //
 //  SimpleQuizGameTests.m
-//  SimpleQuizGameTests
 //
-//  Created by Matt on 11/10/14.
-//  Copyright (c) 2014 Matthew Piccolella. All rights reserved.
+//  Place your tests here! Testing is important, and do not neglect it.
+//
+//  For more on iOS testing, see:
+//  https://developer.apple.com/library/IOs/documentation/DeveloperTools/Conceptual/testing_with_xcode/testing_3_writing_test_classes/testing_3_writing_test_classes.html
 //
 
 #import <UIKit/UIKit.h>
