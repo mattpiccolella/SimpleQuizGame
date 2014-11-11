@@ -14,11 +14,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutlet UITextField *answerField;
 @property (strong, nonatomic) IBOutlet UILabel *answerLabel;
+@property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
 - (IBAction)answerButton:(id)sender;
 - (IBAction)nextQuestionButton:(id)sender;
 
 @property (strong, nonatomic) NSMutableArray *questionsArray;
 @property (nonatomic) NSInteger currentIndex;
+@property (nonatomic) NSInteger score;
 
 @end
 
@@ -29,9 +31,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.questionsArray = [self loadQuestionsArray];
     self.currentIndex = 0;
+    self.score = 0;
     QuizQuestion *currentQuestion = [self currentQuestion];
     [self.questionLabel setText:currentQuestion.question];
     [self.answerLabel setHidden:TRUE];
+    [self.scoreLabel setText:[self currentScore]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +47,7 @@
 }
 
 - (IBAction)nextQuestionButton:(id)sender {
+    
 }
 
 - (NSMutableArray*) loadQuestionsArray {
@@ -56,5 +61,9 @@
 - (QuizQuestion*) currentQuestion {
     NSUInteger currentQuestionIndex = (NSUInteger) (self.currentIndex % [self.questionsArray count]);
     return [self.questionsArray objectAtIndex:currentQuestionIndex];
+}
+
+- (NSString*) currentScore {
+    return [[NSString alloc] initWithFormat:@"Score: %d", self.score];
 }
 @end
