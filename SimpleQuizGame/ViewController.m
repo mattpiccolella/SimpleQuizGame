@@ -87,7 +87,7 @@
 }
 
 - (NSString*) currentScore {
-    return [[NSString alloc] initWithFormat:@"Score: %d", self.score];
+    return [[NSString alloc] initWithFormat:@"Score: %ld", (long) self.score];
 }
 
 - (void)setInterfaceForCurrentQuestion {
