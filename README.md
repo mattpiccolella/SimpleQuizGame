@@ -27,13 +27,13 @@ Important Files
     └── Info.plist
 
 
--   `AppDelegate.m` - 
--   `QuizQuestion.m` - 
--   `ViewController.m` - 
--   `Base.lproj` - 
-    -   `LaunchScreen.xib` - 
-    -   `Main.storyboard` - 
--   `main.m` - 
--   `Info.plist` - 
+-   `AppDelegate.m` - The master of your application. Handles transitions between views, holds application-wide data, and handles interactions with the rest of the device.
+-   `QuizQuestion.m` - The model in the MVC framework. Encapsulates the data that we need for our quiz game.
+-   `ViewController.m` -  The controller in the MVC framework. Intermediates between user actions and the data of an application, responding to things like touch events with changes to the user interface.
+-   `Base.lproj` - Holds all the storyboard and xib files, which comprise the views in the MVC framework. Everything you visually see (text boxes, buttons, etc.) are defined in the files in this directory.
+    -   `LaunchScreen.xib` - The screen that appears when the application is first launched. We edit these using the interface builder.
+    -   `Main.storyboard` - Our main storyboard, which can have multiple views in a single file. Helps to eliminate the need for multiple .xib files by keeping all screens in a single file.
+-   `main.m` - A simple C file to run the application. Needed because C requires their to be a `main` method in every C application. Don't ever touch this.
+-   `Info.plist` - A list of properties about your application, including name, version number, etc. This can be used for things like API keys, etc.
 
 
